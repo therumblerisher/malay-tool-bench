@@ -1,0 +1,44 @@
+[project]
+name = "malay-tool-bench"
+version = "0.1.0"
+description = "Malaysian BM, English & Manglish (Rojak) agent tool-calling and safety benchmark"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.11.0",
+    "typer>=0.15.2",
+]
+
+[project.scripts]
+malay-tool-bench = "malay_tool_bench.cli:app"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+    "ruff>=0.11.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/malay_tool_bench"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

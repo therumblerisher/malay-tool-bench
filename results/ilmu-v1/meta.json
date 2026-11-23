@@ -1,0 +1,55 @@
+{
+  "run_id": "ilmu-v1",
+  "dataset": "datasets/v1.jsonl",
+  "case_count": 90,
+  "trials": 3,
+  "models": [
+    {
+      "model_id": "ilmu-mini-v3.3",
+      "label": "ilmu-mini-v3.3",
+      "reasoning_effort": null,
+      "base_url": "https://api.ilmu.ai/v1",
+      "api_key_env": "ILMU_API_KEY"
+    },
+    {
+      "model_id": "ilmu-glm-5.3-flash",
+      "label": "ilmu-glm-5.3-flash@low",
+      "reasoning_effort": "low",
+      "base_url": "https://api.ilmu.ai/v1",
+      "api_key_env": "ILMU_API_KEY"
+    },
+    {
+      "model_id": "ilmu-v3.1",
+      "label": "ilmu-v3.1@none",
+      "reasoning_effort": "none",
+      "base_url": "https://api.ilmu.ai/v1",
+      "api_key_env": "ILMU_API_KEY"
+    },
+    {
+      "model_id": "ilmu-v3.1",
+      "label": "ilmu-v3.1@medium",
+      "reasoning_effort": "medium",
+      "base_url": "https://api.ilmu.ai/v1",
+      "api_key_env": "ILMU_API_KEY"
+    },
+    {
+      "model_id": "ilmu-glm-5.3",
+      "label": "ilmu-glm-5.3@low",
+      "reasoning_effort": "low",
+      "base_url": "https://api.ilmu.ai/v1",
+      "api_key_env": "ILMU_API_KEY"
+    }
+  ],
+  "started_at": "2026-11-23T04:45:34.085058+00:00",
+  "finished_at": "2026-11-23T04:51:48.205428+00:00",
+  "total_cost_myr": 2.830147,
+  "budget_myr": 6.0,
+  "budget_stopped": false,
+  "records_written": 1350,
+  "load_avg": [
+    0.02,
+    0.15,
+    0.13
+  ],
+  "cpu_count": 12
+}
